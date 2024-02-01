@@ -1,0 +1,31 @@
+.main {
+  padding: 80px;  
+}
+
+.infobox {
+  background: rgb(242, 242, 242); 
+  padding: 16px;
+}
+
+.content {
+  display: flex;
+  gap: 32px;  
+}
+
+.articles {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contributors_list {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;  
+  list-style: none;
+}
+
+.contributors_list > li {
+  margin-bottom: 8px;
+}

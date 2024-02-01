@@ -1,0 +1,57 @@
+{{ define "main" }}
+    <div class="main">
+      <h1>Project log: chronicle</h1>
+
+      <div class="content">    
+        <div class="articles">
+          <div class="infobox">
+            <p>This is a behind-the-scenes journal of the work in progress on Chronicle, a research project explorign revision control for authors,
+            developers, and other creative fields.
+            </p>
+
+            <p>
+              Follow via <a href="">RSS</a> or <a href="">@someaccount</a>
+            </p>
+
+
+          </div>
+
+
+            {{ range .Site.RegularPages.ByDate.Reverse }}
+                {{ if eq .Type "posts" }}
+                    <article>
+                        <h1>{{ .Title }}</h1>
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 26, 2024" }}</time>
+                        <p>{{ .Content }}</p>
+                    </article>
+                {{ end }}
+            {{ end }}
+        </div>      
+
+        <div class="contributors">
+          <h2>Ink & Switch</h1>
+          <p>The Chronicle team is:</p>
+
+          <ul class="contributors_list">
+            <li>
+              <a href="https://www.geoffreylitt.com/">Geoffrey Litt</a>
+            </li>
+            <li>
+              <a href="http://paulsonnentag.com/">Paul Sonnentag</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/mschoening">Max Schoening</a>
+            </li>
+            <li>
+              <a href="https://www.pvh.ca/">Peter van Hardenberg</a>
+            </li>
+            <li>
+              <a href="https://adamwiggins.com/">Adam Wiggins</a>
+            </li>
+            <li>
+              Orion Henry
+            </li>
+          </div>
+        </div>
+      </div>
+{{ end }}
