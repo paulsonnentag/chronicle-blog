@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
+  {{- partial "head.html" . -}}
+  <body>
+    <main class="main">
+      <div class="content">
+        {{- partial "header.html" . -}} {{- block "main" . }}{{- end }}
+      </div>
+      <div class="contributors">
+        <h2 style="margin-top:0">Ink & Switch</h1>
+        <p>The Chronicle team is:</p>
+    
+        <ul class="contributors_list">
+          <li>
+            <a href="https://www.geoffreylitt.com/">Geoffrey Litt</a>
+          </li>
+          <li>
+            <a href="http://paulsonnentag.com/">Paul Sonnentag</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/mschoening">Max Schoening</a>
+          </li>
+          <li>
+            <a href="https://www.pvh.ca/">Peter van Hardenberg</a>
+          </li>
+          <li>
+            <a href="https://adamwiggins.com/">Adam Wiggins</a>
+          </li>
+          <li>
+            Orion Henry
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    {{- partial "footer.html" . -}}
+  </body>
 </html>

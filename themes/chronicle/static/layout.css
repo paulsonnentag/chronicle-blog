@@ -1,5 +1,7 @@
 .main {
-  padding: 80px;  
+  padding: 80px;
+  display: flex;
+  gap: 64px;
 }
 
 .infobox {
@@ -9,6 +11,7 @@
 
 .content {
   display: flex;
+  flex-direction: column;
   gap: 32px;  
 }
 
@@ -25,7 +28,6 @@
   flex-direction: column;  
   list-style: none;
 }
-
 .contributors_list > li {
   margin-bottom: 8px;
 }
